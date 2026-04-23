@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface": "#e5e2e1",
+                    "primary": "#f2be8c",
+                    "tertiary-fixed": "#fbddca",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#2c1600",
+                    "outline": "#9c8e82",
+                    "on-primary-container": "#5b3912",
+                    "on-surface-variant": "#d4c4b7",
+                    "surface-container-highest": "#353535",
+                    "on-secondary-fixed-variant": "#643f00",
+                    "tertiary": "#dfc2b1",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#503c2f",
+                    "on-secondary-container": "#3d2400",
+                    "on-secondary": "#462a00",
+                    "on-error": "#690005",
+                    "surface-bright": "#393939",
+                    "on-primary-fixed-variant": "#623f18",
+                    "surface-variant": "#353535",
+                    "surface": "#131313",
+                    "secondary-container": "#c68315",
+                    "secondary-fixed": "#ffddb6",
+                    "on-background": "#e5e2e1",
+                    "surface-tint": "#f0bd8b",
+                    "primary-fixed-dim": "#f0bd8b",
+                    "on-secondary-fixed": "#2a1800",
+                    "on-tertiary-fixed": "#28180d",
+                    "primary-fixed": "#ffdcbd",
+                    "tertiary-container": "#c3a796",
+                    "primary-container": "#d4a373",
+                    "outline-variant": "#50453b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container": "#20201f",
+                    "surface-dim": "#131313",
+                    "secondary-fixed-dim": "#ffb95a",
+                    "on-primary": "#482904",
+                    "on-tertiary": "#3f2c20",
+                    "on-tertiary-fixed-variant": "#574335",
+                    "error-container": "#93000a",
+                    "secondary": "#ffb95a",
+                    "background": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed-dim": "#dec1af",
+                    "inverse-on-surface": "#313030",
+                    "inverse-primary": "#7d562d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-padding": "80px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Noto Serif"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Noto Serif"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-xl": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrolling-touch { -webkit-overflow-scrolling: touch; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-[#D4A373]/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<nav class="flex justify-between items-center px-6 py-4">
+<span class="font-serif text-2xl font-bold text-[#D4A373] uppercase tracking-tighter">Heritage Grains</span>
+<button class="text-[#D4A373] p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[0.2] brightness-50" data-alt="Close-up of artisan sourdough bread with a crispy golden crust being sliced on a dark wooden board in a moody, low-light kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKTcedCgl-Td1NmSb81qnVxPtssjZRhNdNfUFOluOeKweMtWTHz240nxAT8WAd7moxFbkKmw5bQbt23G4_otcYQnRzjHgEvKJ2YvvLTJllduvzVkSr3DLzlwtZLHBHDwqyU-vgto8_dVke_eUDrQjLfFcDtMXNVeY1OU2gMT7NYfeZkUUvCzdkIAHtno2I9tU0Xo4Iu4JbXA0uvBLQEvsGCyzu3b3a4m2Q4cV5PPFLcW3GLtEvjeoDeoNWFRHD_gfomL3LJZ5tekI3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-6 pb-12">
+<p class="font-label-md text-primary mb-4 tracking-[0.2em] uppercase">Est. 1924</p>
+<h1 class="font-headline-xl text-on-surface mb-6">Honoring the Ancient Craft</h1>
+<p class="font-body-lg text-on-surface-variant max-w-[85%] mb-8">
+                    Slow-fermented sourdough, stone-milled grains, and the warmth of a wood-fired hearth.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="bg-[#D4A373] text-[#1A1A1A] py-4 px-8 rounded-lg font-label-md flex justify-center items-center gap-2">
+<span>Visit Us</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Specialties (Bento Style Mobile) -->
+<section class="px-6 py-20 bg-surface-container-lowest">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-on-surface mb-2">Our Specialties</h2>
+<div class="h-1 w-12 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Main Feature Card -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden shadow-2xl border border-outline-variant/10">
+<div class="h-56 relative">
+<img class="w-full h-full object-cover" data-alt="Golden brown sourdough loaf with steam rising, professional lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0DQWiscaI_GoI-vWmRgQpMe_HA1vF7nmg1-haq8nszJktyz2N1WtN34vcaIWkkq8OlTivj57mRUFcCLsznfMYy0OSStST-1zY06WCMAUVhcSMTYUWXfS6xJ7O2Y8ddbliDPvXtsEgiixJU5r2P2lbpDVNHyEYtG9MwA9mk5vSb1r9ovWjB6DaFhKjwqVS7AmeqasZleHqEq0GErquQf8VPDSa9ktyB-aPKQ7w9FBVu0X1UXVctkqN2EEytQmjwPoSkum1nJbJC1Wz"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-primary mb-2">Wild Yeast Sourdough</h3>
+<p class="font-body-md text-on-surface-variant mb-4">A 72-hour fermentation process using our 100-year-old starter.</p>
+<span class="font-label-sm text-tertiary bg-tertiary-container/20 py-1 px-3 rounded-full">Signature</span>
+</div>
+</div>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-surface-container-high rounded-xl p-6 flex items-center gap-6 border border-outline-variant/10">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Tray of freshly baked buttery croissants with flaky layers on a dark marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKQFpUJ7v_Pj7XxaxIBgNRKOmX51Gm6yzV19TaEWbZ1PlW6lX__8OndpONqr5oUeQap8i_Nuvj2TYWjUg9A0n_NL60D7mrpygHssz9pfXdoVF5KgKeA71EpVRu8pGgsQAE7m8CP2PUvZZ1O_xWdc8vROyA6yVANUB7QYGnkQP8u2TcH3BKyLIXDFx9iHZ3rtv0-dTVBCzw_Mgc48gwOEHtdn4D9Xqhc2vl4hcx5tKp_bpUazEdKhT7iu98xW1JXfmopRYuWgCQMgCt"/>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface text-lg">French Pastries</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Hand-laminated with local cultured butter.</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex items-center gap-6 border border-outline-variant/10">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Earthy whole grain loaf topped with seeds and oats, rustic presentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3lOf5NjdCk-n0IULC1r8MUEfniIuh5rJeJpzMkae5txI0wOH1u3cl_uxByNuGHTerI1Goo4-0c_wAH-ccP3zqU1Z3gAk7knsiI-xaiq2teQEvaKc3k2DNnYbhzSmmROXRBPXJC4yD8G7RqlXoHhskHctz8ZsgTOTwamunba27CHEmp95MjnmXc2VH_zWEzgrHEJBwgKUDqHdeIs3ETMgPMEpYzhMh_956g8PMdO4Gf7uAlepQwva7mnvPTr0OP-WJ0h8GsYn2v8Yk"/>
+</div>
+<div>
+<h4 class="font-headline-md text-on-surface text-lg">Ancient Grains</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Spelt and Rye sourced from heritage farms.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Story (Editorial Style) -->
+<section class="relative py-24 px-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20" data-alt="Hands of a baker covered in flour kneading dough on a rustic wooden table with atmospheric dust in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmOWHq_DkKAjorIMAr47Fj34rmA1AQSNQR2g2VpstPNiP43NM8qYLOGqaJfMCBOHFVRazakvPnbmgAM71xt-1NYvDagfcUfyThSWPAweS5kGLvQOKWW-Hq67wHlSK-sl3cbFVi4alnbxpQcm4jP0rHIqV_RFU9Xe4_2Zth1vgoNyfbRcKOi4-QPFL1bilg8x8ZVpnnWT7euxYm2bAAuJxunOS45GUC9LC47PVen4AKbvJwK7TANKEzRHRgF13zAfhs9Agmpv8b42Hi"/>
+</div>
+<div class="relative z-10 text-center max-w-sm mx-auto">
+<h2 class="font-headline-lg text-on-surface italic mb-6">"Baking is a conversation with time."</h2>
+<p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                    We believe in the slow way. Every loaf is a testament to the patience required to transform simple grain, water, and salt into sustenance.
+                </p>
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="px-6 py-20 bg-surface">
+<div class="bg-surface-container rounded-2xl p-8 border border-outline-variant/10 shadow-inner">
+<h2 class="font-headline-lg text-on-surface mb-8">Find the Hearth</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="font-label-md text-on-surface uppercase mb-1">Location</h4>
+<p class="font-body-md text-on-surface-variant">1248 Artisans Way,<br/>North Portland, OR 97203</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="font-label-md text-on-surface uppercase mb-1">Daily Hours</h4>
+<p class="font-body-md text-on-surface-variant">Tue — Sun: 7:00 AM – 2:00 PM<br/>Mon: Closed for Sourdough Prep</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<h4 class="font-label-md text-on-surface uppercase mb-1">Reach Out</h4>
+<p class="font-body-md text-on-surface-variant">hello@heritagegrains.com<br/>503.555.0129</p>
+</div>
+</div>
+</div>
+<div class="mt-10 rounded-xl overflow-hidden h-48 grayscale">
+<img class="w-full h-full object-cover" data-alt="Stylized dark map showing an urban neighborhood with a single gold pin" data-location="Portland, Oregon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-XCxFuOxdDSmQkrDrpqeUw3ntHsW-P516uifXr3b26xcltY5-4PZ_b5odxbCPGuGQqMIFExulK-9dkwORZU6ycDP5MgQHh-ph3gZ1IVNFA4JfQf5Cb6o1Fa2yGDk7VZDKeC3lfDDcTlkISXj8Ol9foGiLTV4ZFqaSMuQFfRyfo67z1FiWQbRuroHUmZNF5myocjX1yzvrk8spRkgrbUied2uYsRevJQInCYpuTg-N1KLdq9jPmvXPXrBnTxCD6Xo8ZABaGzkWJ-v3"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1A1A1A] w-full mt-auto border-t border-[#D4A373]/10">
+<div class="grid grid-cols-1 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div>
+<span class="text-[#D4A373] font-serif italic text-xl">Heritage Grains</span>
+<p class="font-sans text-sm tracking-tight text-stone-500 mt-4 leading-relaxed">
+                    © 2024 Heritage Grains Bakery. Handcrafted at dawn. Rooted in the traditions of the old world, baked for the new.
+                </p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-stone-500 hover:text-[#D4A373] transition-all underline-offset-4 hover:underline text-sm uppercase tracking-widest font-label-sm" href="#">Contact</a>
+<a class="text-stone-500 hover:text-[#D4A373] transition-all underline-offset-4 hover:underline text-sm uppercase tracking-widest font-label-sm" href="#">Provenance</a>
+<a class="text-stone-500 hover:text-[#D4A373] transition-all underline-offset-4 hover:underline text-sm uppercase tracking-widest font-label-sm" href="#">Careers</a>
+<a class="text-stone-500 hover:text-[#D4A373] transition-all underline-offset-4 hover:underline text-sm uppercase tracking-widest font-label-sm" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- Fixed Floating Action for Mobile -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="bg-[#D4A373] text-[#1A1A1A] w-14 h-14 rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+</button>
+</div>
+</body></html>
