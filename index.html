@@ -1,345 +1,798 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="de"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Heritage Grains | Tradition in jedem Biss</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-high": "#2a2a2a",
-                        "on-surface": "#e5e2e1",
-                        "primary": "#f2be8c",
-                        "tertiary-fixed": "#fbddca",
-                        "surface-container-low": "#1c1b1b",
-                        "on-error-container": "#ffdad6",
-                        "on-primary-fixed": "#2c1600",
-                        "outline": "#9c8e82",
-                        "on-primary-container": "#5b3912",
-                        "on-surface-variant": "#d4c4b7",
-                        "surface-container-highest": "#353535",
-                        "on-secondary-fixed-variant": "#643f00",
-                        "tertiary": "#dfc2b1",
-                        "error": "#ffb4ab",
-                        "on-tertiary-container": "#503c2f",
-                        "on-secondary-container": "#3d2400",
-                        "on-secondary": "#462a00",
-                        "on-error": "#690005",
-                        "surface-bright": "#393939",
-                        "on-primary-fixed-variant": "#623f18",
-                        "surface-variant": "#353535",
-                        "surface": "#131313",
-                        "secondary-container": "#c68315",
-                        "secondary-fixed": "#ffddb6",
-                        "on-background": "#e5e2e1",
-                        "surface-tint": "#f0bd8b",
-                        "primary-fixed-dim": "#f0bd8b",
-                        "on-secondary-fixed": "#2a1800",
-                        "on-tertiary-fixed": "#28180d",
-                        "primary-fixed": "#ffdcbd",
-                        "tertiary-container": "#c3a796",
-                        "primary-container": "#d4a373",
-                        "outline-variant": "#50453b",
-                        "surface-container-lowest": "#0e0e0e",
-                        "surface-container": "#20201f",
-                        "surface-dim": "#131313",
-                        "secondary-fixed-dim": "#ffb95a",
-                        "on-primary": "#482904",
-                        "on-tertiary": "#3f2c20",
-                        "on-tertiary-fixed-variant": "#574335",
-                        "error-container": "#93000a",
-                        "secondary": "#ffb95a",
-                        "background": "#131313",
-                        "inverse-surface": "#e5e2e1",
-                        "tertiary-fixed-dim": "#dec1af",
-                        "inverse-on-surface": "#313030",
-                        "inverse-primary": "#7d562d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "section-padding": "80px",
-                        "margin-mobile": "16px",
-                        "gutter": "24px",
-                        "container-max": "1200px"
-                    },
-                    "fontFamily": {
-                        "headline-lg": ["Noto Serif"],
-                        "label-md": ["Be Vietnam Pro"],
-                        "headline-md": ["Noto Serif"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "label-sm": ["Be Vietnam Pro"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "headline-xl": ["Noto Serif"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "500"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
-                    }
-                }
-            }
-        }
-    </script>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La Panetteria Fischbacher-Beck</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-        body {
-            background-color: #131313;
-            color: #e5e2e1;
-            scroll-behavior: smooth;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .text-glow {
-            text-shadow: 0 0 20px rgba(212, 163, 115, 0.3);
-        }
-    </style>
+  :root {
+    --bg: #0D0B09;
+    --surface: #1A1510;
+    --surface-high: #241C14;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --cream: #F5EDD8;
+    --muted: #8B7D6B;
+    --border: rgba(201,168,76,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+
+  /* GRAIN OVERLAY */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+  }
+
+  /* NAVBAR */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,11,9,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.4s ease;
+  }
+  #navbar.scrolled { background: rgba(13,11,9,0.97); }
+
+  .nav-link {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+    transition: color 0.2s; position: relative; padding-bottom: 2px;
+  }
+  .nav-link::after {
+    content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+    height: 1px; background: var(--gold); transform: scaleX(0);
+    transition: transform 0.3s ease; transform-origin: left;
+  }
+  .nav-link:hover { color: var(--cream); }
+  .nav-link:hover::after { transform: scaleX(1); }
+
+  .btn-gold {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gold);
+    border: 1px solid var(--gold); border-radius: 2px;
+    padding: 9px 20px; transition: all 0.25s ease;
+    background: transparent;
+  }
+  .btn-gold:hover { background: var(--gold); color: #0D0B09; }
+
+  .btn-gold-fill {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #0D0B09;
+    background: var(--gold); border: 1px solid var(--gold);
+    border-radius: 2px; padding: 14px 36px; transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-gold-fill:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+  .btn-outline-cream {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--cream);
+    background: transparent; border: 1px solid rgba(245,237,216,0.4);
+    border-radius: 2px; padding: 14px 36px; transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .btn-outline-cream:hover { border-color: var(--cream); }
+
+  /* HERO */
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCc5GQzmtYmTi8azibJU3fozN8FBRFKA_qu6umg1rLKAObtWATEBUjxLZKTxa_f9JuZAVV46w0RQhBvD7LEtOOeIBSfc9Ieqdh1kWjqKDvCsY4hDxetmjWSIbanSEskzz3AwUlIo8c5JH9-BCL3LJrJV1Xcht2-8wd_bX48xUDDJBK6dKC_207XEfrZ-IiXfIjlNkwuDKtJpmB2avYFQZNvahwZ0iDHN1fwcBNcR2z5eSeCISnOiri_zVd4GA0fuJlMVkTQbiI3jFAT');
+    background-size: cover; background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+  .hero-bg.loaded { transform: scale(1); }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(13,11,9,0.3) 0%, rgba(13,11,9,0.55) 50%, rgba(13,11,9,0.9) 100%);
+  }
+
+  /* SCROLL INDICATOR */
+  @keyframes bounce-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  .scroll-indicator { animation: bounce-y 2s ease-in-out infinite; }
+
+  /* MARQUEE */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-inner { animation: marquee 30s linear infinite; white-space: nowrap; }
+  .marquee-inner:hover { animation-play-state: paused; }
+
+  /* SECTION DECORATION */
+  .section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .section-label::before {
+    content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 180px; font-weight: 300; line-height: 1;
+    color: rgba(201,168,76,0.06);
+    position: absolute; top: -20px; left: -20px;
+    pointer-events: none; user-select: none;
+    letter-spacing: -0.05em;
+  }
+
+  /* BENTO CARDS */
+  .bento-card {
+    position: relative; overflow: hidden; border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease, transform 0.4s ease;
+    cursor: pointer;
+  }
+  .bento-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
+  .bento-card img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.7s ease; opacity: 0.75;
+  }
+  .bento-card:hover img { transform: scale(1.05); opacity: 0.85; }
+  .bento-card .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(13,11,9,0.9) 0%, rgba(13,11,9,0.2) 60%, transparent 100%);
+  }
+  .bento-card .content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; }
+  .category-tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    background: rgba(201,168,76,0.15); color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 4px 10px; border-radius: 2px; margin-bottom: 10px;
+  }
+
+  /* PRODUCT CARDS */
+  .product-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 32px;
+    transition: all 0.3s ease;
+    position: relative; overflow: hidden;
+  }
+  .product-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at top left, rgba(201,168,76,0.04) 0%, transparent 70%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .product-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+  .product-card:hover::before { opacity: 1; }
+
+  /* ABOUT IMAGE FRAME */
+  .about-img-wrap {
+    position: relative;
+  }
+  .about-img-wrap::before {
+    content: ''; position: absolute;
+    top: 20px; left: 20px; right: -20px; bottom: -20px;
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px; z-index: 0;
+  }
+  .about-img-wrap img {
+    position: relative; z-index: 1;
+    border-radius: 8px; width: 100%; object-fit: cover;
+  }
+
+  /* PROCESS STEPS */
+  .step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px; font-weight: 300; line-height: 1;
+    color: rgba(201,168,76,0.08);
+    position: absolute; top: -30px; left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; user-select: none;
+  }
+
+  /* FORM INPUTS */
+  .form-input {
+    width: 100%; background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--cream); font-family: 'Inter', sans-serif;
+    font-size: 14px; padding: 14px 16px;
+    border-radius: 4px; outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-input:focus { border-color: rgba(201,168,76,0.5); }
+  .form-input::placeholder { color: var(--muted); }
+
+  /* FADE UP ANIMATION */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* GOLD LINE */
+  .gold-line { width: 40px; height: 1px; background: var(--gold); }
+
+  /* HOURS TABLE */
+  .hours-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .hours-row:last-child { border-bottom: none; }
+
+  /* TESTIMONIAL DOTS */
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--muted); cursor: pointer; transition: background 0.2s;
+  }
+  .dot.active { background: var(--gold); }
+
+  /* MOBILE MENU */
+  #mobile-menu {
+    display: none; flex-direction: column;
+    background: rgba(13,11,9,0.98);
+    border-top: 1px solid var(--border);
+    padding: 32px 24px; gap: 0;
+  }
+  #mobile-menu.open { display: flex; }
+  #mobile-menu a {
+    font-size: 14px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted);
+    padding: 16px 0; border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  #mobile-menu a:hover { color: var(--cream); }
+  #mobile-menu .mobile-cta {
+    margin-top: 24px; text-align: center;
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 2px; }
+
+  @media (max-width: 768px) {
+    .hero-h1 { font-size: 52px !important; }
+    .stats-grid { grid-template-columns: 1fr 1fr !important; }
+    .bento-grid { grid-template-columns: 1fr !important; }
+    .bento-grid > * { grid-column: span 1 !important; }
+  }
+</style>
 </head>
-<body class="font-body-md bg-background text-on-background">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-[#D4A373]/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-    <div class="flex justify-between items-center px-4 md:px-8 py-1 max-w-7xl mx-auto">
-        <img src="logo.png" alt="Heritage Grains" class="h-14 md:h-28 w-auto"/>
-        <!-- Desktop Nav -->
-        <div class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
-            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">History</a>
-            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Our Craft</a>
-            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Daily Menu</a>
-            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Specialties</a>
-            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Locations</a>
-        </div>
-        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">Visit Us</button>
-        <!-- Mobile Hamburger -->
-        <button class="md:hidden text-[#D4A373] p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-            <span class="material-symbols-outlined text-3xl">menu</span>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav id="navbar">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <!-- Logo -->
+      <a href="#">
+        <img src="logo.png" alt="La Panetteria" style="height:52px;width:auto;" class="md-logo"/>
+      </a>
+      <!-- Desktop Nav -->
+      <div style="display:flex;align-items:center;gap:40px;" class="desktop-nav hidden md:flex">
+        <a href="#specialties" class="nav-link">Sortiment</a>
+        <a href="#specialties" class="nav-link">Spezialitäten</a>
+        <a href="#about" class="nav-link">Über uns</a>
+        <a href="#highlights" class="nav-link">Tagesangebote</a>
+        <a href="#location" class="nav-link">Kontakt</a>
+      </div>
+      <!-- CTA + Hamburger -->
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="#location" class="btn-gold hidden md:block">Besuchen Sie uns</a>
+        <button id="hamburger" class="md:hidden" onclick="toggleMenu()" style="background:none;border:none;cursor:pointer;padding:8px;">
+          <div style="width:22px;height:1px;background:var(--cream);margin-bottom:6px;transition:all 0.3s;" id="h1"></div>
+          <div style="width:14px;height:1px;background:var(--gold);margin-bottom:6px;transition:all 0.3s;" id="h2"></div>
+          <div style="width:22px;height:1px;background:var(--cream);transition:all 0.3s;" id="h3"></div>
         </button>
+      </div>
     </div>
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#1A1A1A] border-t border-[#D4A373]/15 px-6 py-4 flex flex-col gap-1 font-serif text-lg">
-        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">History</a>
-        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Our Craft</a>
-        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Daily Menu</a>
-        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Specialties</a>
-        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Locations</a>
-        <button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md mt-3">Visit Us</button>
-    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="#specialties">Sortiment</a>
+    <a href="#specialties">Spezialitäten</a>
+    <a href="#about">Über uns</a>
+    <a href="#highlights">Tagesangebote</a>
+    <a href="#location">Kontakt</a>
+    <div class="mobile-cta"><a href="#location" class="btn-gold" style="display:inline-block;">Besuchen Sie uns</a></div>
+  </div>
 </nav>
-<main>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-60" data-alt="Close-up of artisan sourdough bread on dark marble countertop with dramatic side lighting and flour dusting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5GQzmtYmTi8azibJU3fozN8FBRFKA_qu6umg1rLKAObtWATEBUjxLZKTxa_f9JuZAVV46w0RQhBvD7LEtOOeIBSfc9Ieqdh1kWjqKDvCsY4hDxetmjWSIbanSEskzz3AwUlIo8c5JH9-BCL3LJrJV1Xcht2-8wd_bX48xUDDJBK6dKC_207XEfrZ-IiXfIjlNkwuDKtJpmB2avYFQZNvahwZ0iDHN1fwcBNcR2z5eSeCISnOiri_zVd4GA0fuJlMVkTQbiI3jFAT"/>
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
-</div>
-<div class="relative z-10 text-center max-w-4xl px-margin-mobile">
-<span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-4 block">Seit 1924 Handgefertigt</span>
-<h1 class="font-headline-xl text-on-background mb-6 leading-tight">
-                    Tradition in jedem Biss
-                </h1>
-<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
-                    Willkommen bei Heritage Grains. Wo die Zeit stillsteht und das Handwerk im Vordergrund steht. Wir backen nach alten Rezepten mit Seele und Leidenschaft.
-                </p>
-<div class="flex flex-col md:flex-row gap-4 justify-center">
-<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md hover:shadow-[0_0_20px_rgba(242,190,140,0.4)] transition-all" href="#specialties">
-                        Unsere Spezialitäten
-                    </a>
-<a class="border border-outline text-on-surface px-8 py-4 rounded-lg font-label-md hover:bg-surface-variant transition-all" href="#location">
-                        Standort finden
-                    </a>
-</div>
-</div>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section style="position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;" class="grain">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+  <div style="position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px;">
+    <p class="fade-up" style="font-size:11px;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;">
+      Seit 1924 &nbsp;·&nbsp; Handgefertigt in der Schweiz
+    </p>
+    <h1 class="font-cormorant fade-up hero-h1" style="font-size:96px;font-weight:300;line-height:0.95;color:var(--cream);margin-bottom:28px;letter-spacing:-0.02em;" data-delay="100">
+      Tradition in<br/><em style="font-style:italic;color:var(--gold-light);">jedem Biss.</em>
+    </h1>
+    <p class="fade-up" style="font-size:17px;color:rgba(245,237,216,0.65);max-width:480px;margin:0 auto 44px;line-height:1.7;" data-delay="200">
+      Handwerkliche Backkunst mit regionalen Zutaten und über 100 Jahren Leidenschaft.
+    </p>
+    <div class="fade-up" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-delay="300">
+      <a href="#specialties" class="btn-gold-fill">Unsere Spezialitäten</a>
+      <a href="#location" class="btn-outline-cream">Standort finden</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;">
+    <span style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,237,216,0.35);font-weight:500;">Scroll</span>
+    <div class="scroll-indicator" style="width:1px;height:40px;background:linear-gradient(to bottom, var(--gold), transparent);"></div>
+  </div>
 </section>
-<!-- Specialties Section (Bento Grid) -->
-<section class="py-section-padding px-margin-mobile max-w-container-max mx-auto" id="specialties">
-<div class="mb-12">
-<h2 class="font-headline-lg text-primary mb-2">Unsere Spezialitäten</h2>
-<div class="h-1 w-20 bg-primary-container rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Panettone Feature -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[16/9] flex items-end p-8">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Exquisite artisanal panettone with golden crust and candied fruits on a rustic wooden platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z79KBD8zxDdYwkV3beMstiDzggiVW6krbbT0QhY9Qv280PZ_0x9PCjuwJBrBr8kxm9IegtJdmBc9db5v45beIa7Lc07Vp7Dh3E1-7Ox3p0wgWZe7IDDVBc-v17wP00id3USrpe1iCYa0rJ_prTj5KLqZv87VnQ_8MZFnHwlDjSD03-LbjmnL640Yh5Z5iGKNtJDCcLYVefE08q8ixcCfzM_HZ7u2nsPZ0Q6j6wTGerNVBe_BnlKo2zms3YntF3MopdVDGgqHLySj"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<div class="relative z-10">
-<h3 class="font-headline-md text-on-surface mb-2">Edler Panettone</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">
-                            Drei Tage Gärzeit, feinste Butter und handverlesene Früchte. Ein Meisterwerk der Geduld.
-                        </p>
-</div>
-</div>
-<!-- Hausbrot -->
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[3/4] flex items-end p-8 text-center">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Classic sourdough loaf with deep score marks and a thick dark crust on a linen cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6XZdMiiJQzDw5QsKQoVBG2X2s7ON7OZPaLqT0fcHhPIvSOVWGVHpd2x8HOAOhvbv_UlDMHL0O0CNFIj9CLKErY0OA5aIHFdelZ_1gK6aoSs0iB3zLSpljsVA1YyOScOuvGTmXbp29BD-wsIVFojH6KycWxQ9_xAt5J7Dqta_dB-bJbwYhNq2nPvkXhNo6jhjzEU0uVe-Z8ppi6OIvZ3JdcYcMMNJeG7xzgAz_X13V8v0_o14MOojFD5c6atKtmBBjrhFros1FdFJ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-<div class="relative z-10 w-full">
-<h3 class="font-headline-md text-on-surface mb-2">Das Hausbrot</h3>
-<p class="font-body-md text-on-surface-variant">
-                            Unser Klassiker. 100% Natursauerteig.
-                        </p>
-</div>
-</div>
-<!-- Pastries -->
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-square flex items-end p-8">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Freshly baked butter croissants stacked in a golden brown pile with flaky textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvtPy4nSu5uZJAL5AMMnraly26HsaXhSgxQ3EW-b6kbEBrF68kz8vFGPfYhNnA3NrYCbNnZzyKcWTO63Bvw5S-DlsRXFUHE37_o8pljJpWLaHF_gqDXc6LlH2rhAajNN6ANJZTJUaNOLtNB8dpPl6N4QcNkUv6eRafwZ5D_qQP90Qkd5pnIXX5oqD4zixBKoQ10utMcwNs5uCoD5SfHT9-1OuUj3diutJxDRe97yqwpYp0UV6aODU6ylzYiqPtmrZxT-pjNne4NWz6"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-<div class="relative z-10">
-<h3 class="font-headline-md text-on-surface">Feingebäck</h3>
-</div>
-</div>
-<!-- Seasonal -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[21/9] flex items-center p-12">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50" data-alt="Seasonal selection of bread and pastries on a long table in a sunlit artisanal bakery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXoTWsn7LpuWttmqzrvpLGuDEORnXthTyO08c0ZByD0Qap8i0AI-hldXULzRlrJs_VS_qxHEEfzMcWkopog9DjckO0qnHxxRoyqi2KU2qtIIybQqNsCOOf6RANTU2AcThOkB2fMF9WSyJhOsmKSeWI6auX-Ze6yWblFFCVgkHdaYbjF5Ow9NHzx9I3_niNazpaJY_3oXTyW-TcyP1DL74eCpp4-CLN9PXxqIfyhUrTjDdKdrhQOP5yUOrIreb30M4Rct4wzE7keo2D"/>
-<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
-<div class="relative z-10">
-<h3 class="font-headline-md text-on-surface mb-2">Saisonale Highlights</h3>
-<p class="font-body-md text-on-surface-variant">Jeden Monat neue Kreationen direkt aus dem Steinofen.</p>
-</div>
-</div>
-</div>
+
+<!-- ═══════════════════════════════ STATS BAR ═══════════════════════════════ -->
+<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);">
+      <div style="padding:36px 24px;text-align:center;border-right:1px solid var(--border);">
+        <p class="font-cormorant" style="font-size:48px;font-weight:300;color:var(--gold);line-height:1;">1924</p>
+        <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500;">Gegründet</p>
+      </div>
+      <div style="padding:36px 24px;text-align:center;border-right:1px solid var(--border);">
+        <p class="font-cormorant" style="font-size:48px;font-weight:300;color:var(--gold);line-height:1;">100+</p>
+        <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500;">Produkte</p>
+      </div>
+      <div style="padding:36px 24px;text-align:center;border-right:1px solid var(--border);">
+        <p class="font-cormorant" style="font-size:48px;font-weight:300;color:var(--gold);line-height:1;">3</p>
+        <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500;">Filialen</p>
+      </div>
+      <div style="padding:36px 24px;text-align:center;">
+        <p class="font-cormorant" style="font-size:48px;font-weight:300;color:var(--gold);line-height:1;">Täglich</p>
+        <p style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500;">Frisch gebacken</p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- News Section (Aktuelles) -->
-<section class="py-section-padding bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-margin-mobile">
-<div class="flex justify-between items-end mb-12">
-<div>
-<h2 class="font-headline-lg text-primary mb-2">Aktuelles</h2>
-<p class="font-body-md text-on-surface-variant">Neuigkeiten aus unserer Backstube</p>
-</div>
-<a class="hidden md:flex items-center text-primary font-label-md group" href="#">
-                        Alle Beiträge
-                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- News Item 1 -->
-<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Baker dusting a fresh loaf of bread with flour in a warm atmospheric kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfotP7AB3pODGKBbzwTtR9bgEXzwv74D76g4qQ_NUDz4wS6BKjhOPKGl7tfBApj4PsMhdUE67WfkpxghcFcc9KuCO1NvjXkWXyqLEYcBt76PiT5a2Ml4mLv8a3rrQeJP6g2pviEip1WS8Wjt9ngFVNqdNOgdyv1DEQhpMHWc2HC46fi9OYotT3hdPTjAGX-QWvMJ9o9jy9oR8ru3Da5PEBfgOCTLnp7AzYSXRxQUTknq7mAuSzFwzAL6ZriY7MrcA2hEYO_udJ2CtF"/>
-</div>
-<div class="p-6">
-<span class="font-label-sm text-outline mb-2 block">12. April 2024</span>
-<h4 class="font-headline-md text-on-surface mb-3">Neuer Standort in der Altstadt</h4>
-<p class="font-body-md text-on-surface-variant mb-4">Wir erweitern unsere Familie! Bald begrüßen wir euch in unseren neuen Räumlichkeiten...</p>
-<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
-</div>
-</div>
-<!-- News Item 2 -->
-<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Golden muffins and small cakes on a wire rack cooling near a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBVGKnLL7N-4V_SnTi-bp9kQJjv5tjnpfdB0pRl77e46oGG-Sza40dko34VWI2tsc1CfwWtvwHdRKMQzKdFYvgodvtcYGuzOuD9k3JaOx71V1CGBFUi8ZEYbyBdQ8tIe0bqq6nRMnmPut2eA-lhehj4YHxzjeSukJRrUhE204bu-aJjWoeezUxCFlNvYK4cBoxnEtPCVRBYKQDYP0gE9vAgQcOOOD2n96VFI63VTmEuWnebgwVAT0TLtEiI8PI6PbyCrJxvYuycXb6"/>
-</div>
-<div class="p-6">
-<span class="font-label-sm text-outline mb-2 block">05. April 2024</span>
-<h4 class="font-headline-md text-on-surface mb-3">Die Rückkehr der Brioche</h4>
-<p class="font-body-md text-on-surface-variant mb-4">Nach langer Suche haben wir die perfekte Butter für unsere Brioche gefunden. Ab heute wieder im Sortiment.</p>
-<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
-</div>
-</div>
-<!-- News Item 3 -->
-<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
-<div class="h-48 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Top down view of flour being sifted onto a wooden work surface with grains around" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX06hQ2YfBHo_bmLzMRWP00175L0aRYiZcbRP_aZxHPcev8iSDg2FfxNa_Nqm_uEZj1hxp3m_5YPUtec4UO44VbJE-8O3aiN4PEiGNwVkFNEUGwavrAtx_-JNzQMkcNC3RBdXtjtV1yy_huYWyaXtGiCk8Cenypnuxxfj_e-YAiSWJo3cnaOrmoLhuLll8taJsz5_8cSVuXYB9C9BzvKCeWAzmkywkOcASFvwWCz1UvDMbIhHhpoJLHqpESO2BdL_zvqVAMO_q7sDP"/>
-</div>
-<div class="p-6">
-<span class="font-label-sm text-outline mb-2 block">28. März 2024</span>
-<h4 class="font-headline-md text-on-surface mb-3">Workshop: Sauerteig für Anfänger</h4>
-<p class="font-body-md text-on-surface-variant mb-4">Lerne die Kunst des langsamen Backens in unserem exklusiven Abend-Workshop im Mai.</p>
-<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ═══════════════════════════════ SPECIALTIES ═══════════════════════════════ -->
+<section id="specialties" style="padding:120px 0;position:relative;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <!-- Header -->
+    <div style="margin-bottom:64px;" class="fade-up">
+      <p class="section-label" style="margin-bottom:20px;">01 &nbsp;— Spezialitäten</p>
+      <h2 class="font-cormorant" style="font-size:56px;font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:20px;">
+        Unsere Meisterstücke
+      </h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento-grid" style="display:grid;grid-template-columns:repeat(12,1fr);gap:16px;">
+
+      <!-- Panettone — large -->
+      <div class="bento-card fade-up" style="grid-column:span 8;aspect-ratio:16/9;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z79KBD8zxDdYwkV3beMstiDzggiVW6krbbT0QhY9Qv280PZ_0x9PCjuwJBrBr8kxm9IegtJdmBc9db5v45beIa7Lc07Vp7Dh3E1-7Ox3p0wgWZe7IDDVBc-v17wP00id3USrpe1iCYa0rJ_prTj5KLqZv87VnQ_8MZFnHwlDjSD03-LbjmnL640Yh5Z5iGKNtJDCcLYVefE08q8ixcCfzM_HZ7u2nsPZ0Q6j6wTGerNVBe_BnlKo2zms3YntF3MopdVDGgqHLySj" alt="Panettone"/>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="category-tag">Signature</span>
+          <h3 class="font-cormorant" style="font-size:36px;font-weight:300;color:var(--cream);line-height:1.1;margin-bottom:8px;">Edler Panettone</h3>
+          <p style="font-size:14px;color:rgba(245,237,216,0.6);max-width:400px;line-height:1.6;">Drei Tage Gärzeit, feinste Butter und handverlesene Früchte. Ein Meisterwerk der Geduld.</p>
+        </div>
+      </div>
+
+      <!-- Hausbrot -->
+      <div class="bento-card fade-up" style="grid-column:span 4;aspect-ratio:3/4;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6XZdMiiJQzDw5QsKQoVBG2X2s7ON7OZPaLqT0fcHhPIvSOVWGVHpd2x8HOAOhvbv_UlDMHL0O0CNFIj9CLKErY0OA5aIHFdelZ_1gK6aoSs0iB3zLSpljsVA1YyOScOuvGTmXbp29BD-wsIVFojH6KycWxQ9_xAt5J7Dqta_dB-bJbwYhNq2nPvkXhNo6jhjzEU0uVe-Z8ppi6OIvZ3JdcYcMMNJeG7xzgAz_X13V8v0_o14MOojFD5c6atKtmBBjrhFros1FdFJ" alt="Hausbrot"/>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="category-tag">Klassiker</span>
+          <h3 class="font-cormorant" style="font-size:28px;font-weight:300;color:var(--cream);line-height:1.1;margin-bottom:6px;">Das Hausbrot</h3>
+          <p style="font-size:13px;color:rgba(245,237,216,0.6);">100% Natursauerteig.</p>
+        </div>
+      </div>
+
+      <!-- Feingebäck -->
+      <div class="bento-card fade-up" style="grid-column:span 4;aspect-ratio:1/1;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvtPy4nSu5uZJAL5AMMnraly26HsaXhSgxQ3EW-b6kbEBrF68kz8vFGPfYhNnA3NrYCbNnZzyKcWTO63Bvw5S-DlsRXFUHE37_o8pljJpWLaHF_gqDXc6LlH2rhAajNN6ANJZTJUaNOLtNB8dpPl6N4QcNkUv6eRafwZ5D_qQP90Qkd5pnIXX5oqD4zixBKoQ10utMcwNs5uCoD5SfHT9-1OuUj3diutJxDRe97yqwpYp0UV6aODU6ylzYiqPtmrZxT-pjNne4NWz6" alt="Feingebäck"/>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="category-tag">Täglich</span>
+          <h3 class="font-cormorant" style="font-size:28px;font-weight:300;color:var(--cream);">Feingebäck</h3>
+        </div>
+      </div>
+
+      <!-- Saisonal — wide -->
+      <div class="bento-card fade-up" style="grid-column:span 8;aspect-ratio:21/9;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXoTWsn7LpuWttmqzrvpLGuDEORnXthTyO08c0ZByD0Qap8i0AI-hldXULzRlrJs_VS_qxHEEfzMcWkopog9DjckO0qnHxxRoyqi2KU2qtIIybQqNsCOOf6RANTU2AcThOkB2fMF9WSyJhOsmKSeWI6auX-Ze6yWblFFCVgkHdaYbjF5Ow9NHzx9I3_niNazpaJY_3oXTyW-TcyP1DL74eCpp4-CLN9PXxqIfyhUrTjDdKdrhQOP5yUOrIreb30M4Rct4wzE7keo2D" alt="Saisonal"/>
+        <div class="overlay" style="background:linear-gradient(to right, rgba(13,11,9,0.9) 0%, rgba(13,11,9,0.3) 60%, transparent 100%);"></div>
+        <div class="content">
+          <span class="category-tag">Saisonal</span>
+          <h3 class="font-cormorant" style="font-size:32px;font-weight:300;color:var(--cream);margin-bottom:8px;">Saisonale Highlights</h3>
+          <p style="font-size:14px;color:rgba(245,237,216,0.6);">Jeden Monat neue Kreationen direkt aus dem Steinofen.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- Hours & Location Section -->
-<section class="py-section-padding px-margin-mobile" id="location">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="space-y-10">
-<div>
-<h2 class="font-headline-lg text-primary mb-6">Öffnungszeiten &amp; Standort</h2>
-<p class="font-body-lg text-on-surface-variant">
-                            Besuchen Sie uns und erleben Sie den Duft von frisch gebackenem Brot. Wir freuen uns auf Ihren Besuch.
-                        </p>
+
+<!-- ═══════════════════════════════ MARQUEE ═══════════════════════════════ -->
+<div style="background:var(--surface-high);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden;">
+  <div class="marquee-inner" style="display:inline-flex;gap:0;">
+    <span class="font-cormorant" style="font-size:22px;font-weight:300;font-style:italic;color:var(--gold);letter-spacing:0.05em;padding-right:0;">
+      PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp;
+    </span>
+    <span class="font-cormorant" style="font-size:22px;font-weight:300;font-style:italic;color:var(--gold);letter-spacing:0.05em;">
+      PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp; PANETTONE &nbsp;·&nbsp; SAUERTEIG &nbsp;·&nbsp; BRIOCHE &nbsp;·&nbsp; CROISSANT &nbsp;·&nbsp; FOCACCIA &nbsp;·&nbsp; ZOPF &nbsp;·&nbsp;
+    </span>
+  </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div>
-<h3 class="font-label-md text-primary uppercase mb-4 tracking-widest flex items-center">
-<span class="material-symbols-outlined mr-2">schedule</span> Öffnungszeiten
-                            </h3>
-<ul class="space-y-2 text-on-surface font-body-md">
-<li class="flex justify-between"><span>Mo - Fr</span> <span class="text-on-surface-variant">06:00 - 18:30</span></li>
-<li class="flex justify-between"><span>Samstag</span> <span class="text-on-surface-variant">06:30 - 14:00</span></li>
-<li class="flex justify-between"><span>Sonntag</span> <span class="text-on-surface-variant">07:30 - 11:00</span></li>
-</ul>
-</div>
-<div>
-<h3 class="font-label-md text-primary uppercase mb-4 tracking-widest flex items-center">
-<span class="material-symbols-outlined mr-2">location_on</span> Adresse
-                            </h3>
-<p class="text-on-surface font-body-md leading-relaxed">
-                                Getreidegasse 12<br/>
-                                8001 Zürich<br/>
-                                Schweiz
-                            </p>
-</div>
-</div>
-<div class="p-6 bg-surface-container rounded-lg border-l-4 border-primary">
-<p class="font-body-md italic text-on-surface-variant">
-                            "Jeden Morgen ab 04:00 Uhr heizen wir unsere Steinöfen ein, damit pünktlich zum Sonnenaufgang das erste Brot bereitsteht."
-                        </p>
-</div>
-</div>
-<div class="h-[500px] rounded-2xl overflow-hidden shadow-2xl relative border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Stylized map showing a cozy neighborhood street in Zurich where the bakery is located" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNmqyxCDVNthGv02G7kgPwLgCugY56UaQJqQXiAPDy0ocfkvASPUVOv--qUFcuLoqXXYxdXwhgDacR6YRMaA278AdGdMX3I8khYTZkCRQ5fytyHGzLsjZPiu0zYYpTIsW6biotnvzFMhUNATdKXSCu_New3tF6dok0t9iSEzHHlFV52hvJtKb3RkWmpTEy7S6fz2SZ3ZUxIAOZ36xNiv6mvoXBcg5ou5jciZJxq22vuTntW--ppL2VJB9Kng9NtNWhwdo_h85mI_GV"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-<div class="relative">
-<span class="material-symbols-outlined text-primary text-5xl drop-shadow-lg" style="font-variation-settings: 'FILL' 1;">location_on</span>
-<div class="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-ping"></div>
-</div>
-</div>
-</div>
-</div>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section id="about" style="background:var(--surface);padding:120px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="about-grid">
+
+      <!-- Image -->
+      <div class="about-img-wrap fade-up" style="padding-right:20px;padding-bottom:20px;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfotP7AB3pODGKBbzwTtR9bgEXzwv74D76g4qQ_NUDz4wS6BKjhOPKGl7tfBApj4PsMhdUE67WfkpxghcFcc9KuCO1NvjXkWXyqLEYcBt76PiT5a2Ml4mLv8a3rrQeJP6g2pviEip1WS8Wjt9ngFVNqdNOgdyv1DEQhpMHWc2HC46fi9OYotT3hdPTjAGX-QWvMJ9o9jy9oR8ru3Da5PEBfgOCTLnp7AzYSXRxQUTknq7mAuSzFwzAL6ZriY7MrcA2hEYO_udJ2CtF" alt="Backstube" style="height:520px;"/>
+      </div>
+
+      <!-- Text -->
+      <div class="fade-up">
+        <p class="section-label" style="margin-bottom:24px;">02 &nbsp;— Über uns</p>
+        <h2 class="font-cormorant" style="font-size:52px;font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:24px;">
+          Seit 1924 backen<br/>wir mit Seele.
+        </h2>
+        <div class="gold-line" style="margin-bottom:32px;"></div>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:32px;">
+          La Panetteria Fischbacher-Beck steht für über 100 Jahre Backhandwerk in Zürich. Jedes Produkt entsteht mit denselben Werten wie damals: Geduld, erstklassige Zutaten und echte Leidenschaft fürs Handwerk.
+        </p>
+        <blockquote style="border-left:2px solid var(--gold);padding-left:24px;margin-bottom:40px;">
+          <p class="font-cormorant" style="font-size:22px;font-style:italic;color:var(--cream);line-height:1.5;font-weight:300;">
+            „Jeden Morgen ab 04:00 Uhr heizen wir unsere Steinöfen ein, damit pünktlich zum Sonnenaufgang das erste Brot bereitsteht."
+          </p>
+        </blockquote>
+        <a href="#location" style="font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:12px;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:4px;transition:gap 0.2s;" onmouseover="this.style.gap='20px'" onmouseout="this.style.gap='12px'">
+          Mehr über uns &nbsp;→
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#1A1A1A] border-t border-[#D4A373]/10">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto">
-<div class="space-y-4">
-<img src="logo.png" alt="Heritage Grains" class="h-40 w-auto"/>
-<p class="font-sans text-sm tracking-tight text-stone-500 max-w-xs">
-                    Handwerkliche Bäckerei mit Fokus auf traditionelle Fermentation und regionale Getreidesorten.
-                </p>
-<div class="flex space-x-4">
-<a class="text-stone-500 hover:text-[#D4A373] transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-stone-500 hover:text-[#D4A373] transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-<div class="flex flex-col md:items-end justify-between">
-<div class="flex space-x-8 font-sans text-sm tracking-tight">
-<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Contact</a>
-<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Provenance</a>
-<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Careers</a>
-<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Privacy</a>
-</div>
-<div class="font-sans text-sm tracking-tight text-stone-500 mt-8 md:mt-0">
-                    © 2024 Heritage Grains Bakery. Handcrafted at dawn.
-                </div>
-</div>
-</div>
+
+<!-- ═══════════════════════════════ DAILY HIGHLIGHTS ═══════════════════════════════ -->
+<section id="highlights" style="background:var(--bg);padding:120px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:64px;" class="fade-up">
+      <p class="section-label" style="margin-bottom:20px;">03 &nbsp;— Tagesangebote</p>
+      <h2 class="font-cormorant" style="font-size:56px;font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:20px;">
+        Heute aus dem Ofen
+      </h2>
+      <div class="gold-line"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="highlights-grid">
+
+      <div class="product-card fade-up">
+        <span class="category-tag" style="margin-bottom:20px;display:inline-block;">Brot</span>
+        <h3 class="font-cormorant" style="font-size:32px;font-weight:300;color:var(--cream);margin-bottom:12px;line-height:1.1;">Rustikales Dinkelbrot</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;">Schonend geführter Vorteig, 18 Stunden Kühlgare, nussig und aromatisch.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="font-cormorant" style="font-size:28px;font-weight:300;color:var(--gold);">CHF 7.50</span>
+          <a href="#" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Mehr →</a>
+        </div>
+      </div>
+
+      <div class="product-card fade-up">
+        <span class="category-tag" style="margin-bottom:20px;display:inline-block;">Gebäck</span>
+        <h3 class="font-cormorant" style="font-size:32px;font-weight:300;color:var(--cream);margin-bottom:12px;line-height:1.1;">Butter-Croissant</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;">Gezogener Blätterteig mit AOP-Butter aus dem Berner Oberland. Täglich frisch.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="font-cormorant" style="font-size:28px;font-weight:300;color:var(--gold);">CHF 3.80</span>
+          <a href="#" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Mehr →</a>
+        </div>
+      </div>
+
+      <div class="product-card fade-up">
+        <span class="category-tag" style="background:rgba(201,168,76,0.2);margin-bottom:20px;display:inline-block;">Saisonal</span>
+        <h3 class="font-cormorant" style="font-size:32px;font-weight:300;color:var(--cream);margin-bottom:12px;line-height:1.1;">Brioche Tressée</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;">Zart, butterig und leicht. Der Schweizer Klassiker — nach originalem Familienrezept.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="font-cormorant" style="font-size:28px;font-weight:300;color:var(--gold);">CHF 9.20</span>
+          <a href="#" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Mehr →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+<section style="background:var(--surface);padding:120px 0;overflow:hidden;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="margin-bottom:80px;text-align:center;" class="fade-up">
+      <p class="section-label" style="justify-content:center;margin-bottom:20px;">04 &nbsp;— Handwerk</p>
+      <h2 class="font-cormorant" style="font-size:56px;font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:20px;">Unser Handwerk</h2>
+      <div class="gold-line" style="margin:0 auto;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;" class="process-grid">
+
+      <div class="fade-up" style="text-align:center;position:relative;padding-top:60px;">
+        <div class="step-number">1</div>
+        <div style="width:56px;height:56px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;">
+          <span style="color:var(--gold);font-size:20px;">✦</span>
+        </div>
+        <h4 class="font-cormorant" style="font-size:24px;font-weight:400;color:var(--cream);margin-bottom:12px;">Auswahl</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;">Nur die besten regionalen Zutaten — Getreide aus der Schweiz, Butter aus dem Oberland.</p>
+      </div>
+
+      <div class="fade-up" style="text-align:center;position:relative;padding-top:60px;" data-delay="100">
+        <div class="step-number">2</div>
+        <div style="width:56px;height:56px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;">
+          <span style="color:var(--gold);font-size:20px;">❋</span>
+        </div>
+        <h4 class="font-cormorant" style="font-size:24px;font-weight:400;color:var(--cream);margin-bottom:12px;">Teig</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;">Natürliche Fermentation über Stunden. Kein Kompromiss bei Gärzeit und Teigführung.</p>
+      </div>
+
+      <div class="fade-up" style="text-align:center;position:relative;padding-top:60px;" data-delay="200">
+        <div class="step-number">3</div>
+        <div style="width:56px;height:56px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;">
+          <span style="color:var(--gold);font-size:20px;">◈</span>
+        </div>
+        <h4 class="font-cormorant" style="font-size:24px;font-weight:400;color:var(--cream);margin-bottom:12px;">Backen</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;">Im Steinofen bei präziser Temperatur — für die perfekte Kruste und das aromatische Innere.</p>
+      </div>
+
+      <div class="fade-up" style="text-align:center;position:relative;padding-top:60px;" data-delay="300">
+        <div class="step-number">4</div>
+        <div style="width:56px;height:56px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;">
+          <span style="color:var(--gold);font-size:20px;">◇</span>
+        </div>
+        <h4 class="font-cormorant" style="font-size:24px;font-weight:400;color:var(--cream);margin-bottom:12px;">Genuss</h4>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;">Täglich frisch — direkt aus unserem Ofen in Ihre Hände. Nichts von gestern.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ TESTIMONIAL ═══════════════════════════════ -->
+<section style="background:var(--bg);padding:120px 0;text-align:center;">
+  <div style="max-width:800px;margin:0 auto;padding:0 32px;">
+    <p class="font-cormorant fade-up" style="font-size:120px;line-height:0.7;color:var(--gold);opacity:0.4;margin-bottom:32px;">"</p>
+    <div id="testimonial-content">
+      <p class="font-cormorant fade-up" id="testimonial-text" style="font-size:32px;font-weight:300;font-style:italic;color:var(--cream);line-height:1.5;margin-bottom:32px;">
+        Das beste Brot der Stadt. Ich komme jeden Samstag — seit über 20 Jahren. Das Hausbrot ist einfach unvergleichlich.
+      </p>
+      <p class="fade-up" id="testimonial-author" style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500;">
+        — Maria K., Zürich
+      </p>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:48px;" class="fade-up">
+      <div class="dot active" onclick="setTestimonial(0)"></div>
+      <div class="dot" onclick="setTestimonial(1)"></div>
+      <div class="dot" onclick="setTestimonial(2)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ LOCATION ═══════════════════════════════ -->
+<section id="location" style="background:var(--surface);padding:120px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px;">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:80px;align-items:start;" class="location-grid">
+
+      <!-- Left -->
+      <div class="fade-up">
+        <p class="section-label" style="margin-bottom:20px;">05 &nbsp;— Standort</p>
+        <h2 class="font-cormorant" style="font-size:52px;font-weight:300;color:var(--cream);line-height:1.05;margin-bottom:24px;">Besuchen Sie uns</h2>
+        <div class="gold-line" style="margin-bottom:48px;"></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:48px;">
+          <div>
+            <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500;">Öffnungszeiten</p>
+            <div class="hours-row"><span style="color:var(--cream);font-size:14px;">Mo – Fr</span><span style="color:var(--muted);font-size:14px;">06:00 – 18:30</span></div>
+            <div class="hours-row"><span style="color:var(--cream);font-size:14px;">Samstag</span><span style="color:var(--muted);font-size:14px;">06:30 – 14:00</span></div>
+            <div class="hours-row"><span style="color:var(--cream);font-size:14px;">Sonntag</span><span style="color:var(--muted);font-size:14px;">07:30 – 11:00</span></div>
+          </div>
+          <div>
+            <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500;">Adresse</p>
+            <p style="font-size:14px;color:var(--cream);line-height:2;">
+              Getreidegasse 12<br/>
+              8001 Zürich<br/>
+              Schweiz
+            </p>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div style="position:relative;height:280px;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNmqyxCDVNthGv02G7kgPwLgCugY56UaQJqQXiAPDy0ocfkvASPUVOv--qUFcuLoqXXYxdXwhgDacR6YRMaA278AdGdMX3I8khYTZkCRQ5fytyHGzLsjZPiu0zYYpTIsW6biotnvzFMhUNATdKXSCu_New3tF6dok0t9iSEzHHlFV52hvJtKb3RkWmpTEy7S6fz2SZ3ZUxIAOZ36xNiv6mvoXBcg5ou5jciZJxq22vuTntW--ppL2VJB9Kng9NtNWhwdo_h85mI_GV" alt="Karte" style="width:100%;height:100%;object-fit:cover;opacity:0.6;filter:sepia(0.3) brightness(0.7);"/>
+          <div style="position:absolute;inset:0;background:rgba(13,11,9,0.3);"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
+            <div style="width:12px;height:12px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 4px rgba(201,168,76,0.3);animation:bounce-y 2s ease-in-out infinite;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Form -->
+      <div class="fade-up">
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;font-weight:500;">Kontakt</p>
+        <form style="display:flex;flex-direction:column;gap:16px;" onsubmit="return false;">
+          <div>
+            <label style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;font-weight:500;">Name</label>
+            <input type="text" placeholder="Ihr Name" class="form-input"/>
+          </div>
+          <div>
+            <label style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;font-weight:500;">E-Mail</label>
+            <input type="email" placeholder="ihre@email.ch" class="form-input"/>
+          </div>
+          <div>
+            <label style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;font-weight:500;">Nachricht</label>
+            <textarea placeholder="Ihre Nachricht..." class="form-input" style="height:140px;resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn-gold-fill" style="width:100%;margin-top:8px;font-size:12px;letter-spacing:0.15em;">Nachricht senden</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer style="background:#080604;border-top:1px solid var(--border);">
+  <div style="max-width:1280px;margin:0 auto;padding:64px 32px 40px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:64px;margin-bottom:64px;" class="footer-grid">
+
+      <!-- Logo + tagline -->
+      <div>
+        <img src="logo.png" alt="La Panetteria" style="height:52px;width:auto;margin-bottom:20px;"/>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;max-width:260px;">
+          Handwerkliche Bäckerei mit Fokus auf traditionelle Fermentation und regionale Getreidesorten.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:500;">Navigation</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">Sortiment</a>
+          <a href="#" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">Spezialitäten</a>
+          <a href="#about" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">Über uns</a>
+          <a href="#location" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">Kontakt</a>
+        </div>
+      </div>
+
+      <!-- Öffnungszeiten -->
+      <div>
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:500;">Öffnungszeiten</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;gap:16px;"><span style="color:var(--cream);">Mo – Fr</span><span style="color:var(--muted);">06:00–18:30</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;gap:16px;"><span style="color:var(--cream);">Samstag</span><span style="color:var(--muted);">06:30–14:00</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;gap:16px;"><span style="color:var(--cream);">Sonntag</span><span style="color:var(--muted);">07:30–11:00</span></div>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:500;">Folgen Sie uns</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">
+            <span style="width:1px;height:16px;background:var(--border);display:inline-block;"></span> Instagram
+          </a>
+          <a href="#" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">
+            <span style="width:1px;height:16px;background:var(--border);display:inline-block;"></span> Facebook
+          </a>
+          <a href="mailto:info@panettone-beck.ch" style="font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:10px;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">
+            <span style="width:1px;height:16px;background:var(--border);display:inline-block;"></span> E-Mail
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider + copyright -->
+    <div style="border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <p style="font-size:11px;color:rgba(139,125,107,0.5);letter-spacing:0.05em;">© 2024 La Panetteria Fischbacher-Beck. Handcrafted at dawn.</p>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="font-size:11px;color:rgba(139,125,107,0.5);text-decoration:none;letter-spacing:0.05em;" onmouseover="this.style.color='var(--muted)'" onmouseout="this.style.color='rgba(139,125,107,0.5)'">Datenschutz</a>
+        <a href="#" style="font-size:11px;color:rgba(139,125,107,0.5);text-decoration:none;letter-spacing:0.05em;" onmouseover="this.style.color='var(--muted)'" onmouseout="this.style.color='rgba(139,125,107,0.5)'">Impressum</a>
+      </div>
+    </div>
+  </div>
 </footer>
-</body></html>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+<script>
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    const m = document.getElementById('mobile-menu');
+    m.classList.toggle('open');
+  }
+
+  // Hero bg zoom on load
+  window.addEventListener('load', () => {
+    document.getElementById('heroBg').classList.add('loaded');
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, parseInt(delay));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Testimonials
+  const testimonials = [
+    { text: 'Das beste Brot der Stadt. Ich komme jeden Samstag — seit über 20 Jahren. Das Hausbrot ist einfach unvergleichlich.', author: '— Maria K., Zürich' },
+    { text: 'Der Panettone von Fischbacher-Beck ist das einzige, was ich zu Weihnachten verschenke. Jedes Jahr aufs Neue ein Genuss.', author: '— Thomas R., Winterthur' },
+    { text: 'Handwerk auf höchstem Niveau. Man schmeckt sofort, dass hier mit Leidenschaft und Zeit gearbeitet wird.', author: '— Sophie M., Zürich' },
+  ];
+
+  function setTestimonial(i) {
+    const text = document.getElementById('testimonial-text');
+    const author = document.getElementById('testimonial-author');
+    text.style.opacity = '0'; author.style.opacity = '0';
+    setTimeout(() => {
+      text.textContent = testimonials[i].text;
+      author.textContent = testimonials[i].author;
+      text.style.opacity = '1'; author.style.opacity = '1';
+    }, 300);
+    document.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', i === j));
+  }
+
+  document.getElementById('testimonial-text').style.transition = 'opacity 0.3s';
+  document.getElementById('testimonial-author').style.transition = 'opacity 0.3s';
+
+  // Responsive grid fixes
+  function fixResponsive() {
+    const isMobile = window.innerWidth < 768;
+    const aboutGrid = document.querySelector('.about-grid');
+    const locationGrid = document.querySelector('.location-grid');
+    const footerGrid = document.querySelector('.footer-grid');
+    const highlightsGrid = document.querySelector('.highlights-grid');
+    const processGrid = document.querySelector('.process-grid');
+
+    if (aboutGrid) aboutGrid.style.gridTemplateColumns = isMobile ? '1fr' : '1fr 1fr';
+    if (locationGrid) locationGrid.style.gridTemplateColumns = isMobile ? '1fr' : '3fr 2fr';
+    if (footerGrid) footerGrid.style.gridTemplateColumns = isMobile ? '1fr 1fr' : '2fr 1fr 1fr 1fr';
+    if (highlightsGrid) highlightsGrid.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(3,1fr)';
+    if (processGrid) processGrid.style.gridTemplateColumns = isMobile ? '1fr 1fr' : 'repeat(4,1fr)';
+  }
+
+  fixResponsive();
+  window.addEventListener('resize', fixResponsive);
+</script>
+
+</body>
+</html>
