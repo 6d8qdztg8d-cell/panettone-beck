@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Grains | Tradition in jedem Biss</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "primary": "#f2be8c",
+                        "tertiary-fixed": "#fbddca",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#2c1600",
+                        "outline": "#9c8e82",
+                        "on-primary-container": "#5b3912",
+                        "on-surface-variant": "#d4c4b7",
+                        "surface-container-highest": "#353535",
+                        "on-secondary-fixed-variant": "#643f00",
+                        "tertiary": "#dfc2b1",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#503c2f",
+                        "on-secondary-container": "#3d2400",
+                        "on-secondary": "#462a00",
+                        "on-error": "#690005",
+                        "surface-bright": "#393939",
+                        "on-primary-fixed-variant": "#623f18",
+                        "surface-variant": "#353535",
+                        "surface": "#131313",
+                        "secondary-container": "#c68315",
+                        "secondary-fixed": "#ffddb6",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#f0bd8b",
+                        "primary-fixed-dim": "#f0bd8b",
+                        "on-secondary-fixed": "#2a1800",
+                        "on-tertiary-fixed": "#28180d",
+                        "primary-fixed": "#ffdcbd",
+                        "tertiary-container": "#c3a796",
+                        "primary-container": "#d4a373",
+                        "outline-variant": "#50453b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container": "#20201f",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#ffb95a",
+                        "on-primary": "#482904",
+                        "on-tertiary": "#3f2c20",
+                        "on-tertiary-fixed-variant": "#574335",
+                        "error-container": "#93000a",
+                        "secondary": "#ffb95a",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#dec1af",
+                        "inverse-on-surface": "#313030",
+                        "inverse-primary": "#7d562d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-padding": "80px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Serif"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(212, 163, 115, 0.3);
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-[#D4A373]/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+    <div class="flex justify-between items-center px-4 py-1 max-w-7xl mx-auto">
+        <img src="logo.png" alt="Heritage Grains" class="h-14 md:h-28 w-auto"/>
+        <button id="menu-btn" class="text-[#D4A373] p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+    <!-- Dropdown Menu -->
+    <div id="mobile-menu" class="hidden bg-[#1A1A1A] border-t border-[#D4A373]/15 px-6 py-4 flex flex-col gap-1 font-serif text-lg">
+        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">History</a>
+        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Our Craft</a>
+        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Daily Menu</a>
+        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Specialties</a>
+        <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Locations</a>
+        <button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md mt-3">Visit Us</button>
+    </div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="Close-up of artisan sourdough bread on dark marble countertop with dramatic side lighting and flour dusting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5GQzmtYmTi8azibJU3fozN8FBRFKA_qu6umg1rLKAObtWATEBUjxLZKTxa_f9JuZAVV46w0RQhBvD7LEtOOeIBSfc9Ieqdh1kWjqKDvCsY4hDxetmjWSIbanSEskzz3AwUlIo8c5JH9-BCL3LJrJV1Xcht2-8wd_bX48xUDDJBK6dKC_207XEfrZ-IiXfIjlNkwuDKtJpmB2avYFQZNvahwZ0iDHN1fwcBNcR2z5eSeCISnOiri_zVd4GA0fuJlMVkTQbiI3jFAT"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile">
+<span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-4 block">Seit 1924 Handgefertigt</span>
+<h1 class="font-headline-xl text-on-background mb-6 leading-tight">
+                    Tradition in jedem Biss
+                </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Willkommen bei Heritage Grains. Wo die Zeit stillsteht und das Handwerk im Vordergrund steht. Wir backen nach alten Rezepten mit Seele und Leidenschaft.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md hover:shadow-[0_0_20px_rgba(242,190,140,0.4)] transition-all" href="#specialties">
+                        Unsere Spezialitäten
+                    </a>
+<a class="border border-outline text-on-surface px-8 py-4 rounded-lg font-label-md hover:bg-surface-variant transition-all" href="#location">
+                        Standort finden
+                    </a>
+</div>
+</div>
+</section>
+<!-- Specialties Section (Bento Grid) -->
+<section class="py-section-padding px-margin-mobile max-w-container-max mx-auto" id="specialties">
+<div class="mb-12">
+<h2 class="font-headline-lg text-primary mb-2">Unsere Spezialitäten</h2>
+<div class="h-1 w-20 bg-primary-container rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Panettone Feature -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[16/9] flex items-end p-8">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Exquisite artisanal panettone with golden crust and candied fruits on a rustic wooden platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z79KBD8zxDdYwkV3beMstiDzggiVW6krbbT0QhY9Qv280PZ_0x9PCjuwJBrBr8kxm9IegtJdmBc9db5v45beIa7Lc07Vp7Dh3E1-7Ox3p0wgWZe7IDDVBc-v17wP00id3USrpe1iCYa0rJ_prTj5KLqZv87VnQ_8MZFnHwlDjSD03-LbjmnL640Yh5Z5iGKNtJDCcLYVefE08q8ixcCfzM_HZ7u2nsPZ0Q6j6wTGerNVBe_BnlKo2zms3YntF3MopdVDGgqHLySj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-on-surface mb-2">Edler Panettone</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">
+                            Drei Tage Gärzeit, feinste Butter und handverlesene Früchte. Ein Meisterwerk der Geduld.
+                        </p>
+</div>
+</div>
+<!-- Hausbrot -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[3/4] flex items-end p-8 text-center">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="Classic sourdough loaf with deep score marks and a thick dark crust on a linen cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6XZdMiiJQzDw5QsKQoVBG2X2s7ON7OZPaLqT0fcHhPIvSOVWGVHpd2x8HOAOhvbv_UlDMHL0O0CNFIj9CLKErY0OA5aIHFdelZ_1gK6aoSs0iB3zLSpljsVA1YyOScOuvGTmXbp29BD-wsIVFojH6KycWxQ9_xAt5J7Dqta_dB-bJbwYhNq2nPvkXhNo6jhjzEU0uVe-Z8ppi6OIvZ3JdcYcMMNJeG7xzgAz_X13V8v0_o14MOojFD5c6atKtmBBjrhFros1FdFJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 w-full">
+<h3 class="font-headline-md text-on-surface mb-2">Das Hausbrot</h3>
+<p class="font-body-md text-on-surface-variant">
+                            Unser Klassiker. 100% Natursauerteig.
+                        </p>
+</div>
+</div>
+<!-- Pastries -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-square flex items-end p-8">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Freshly baked butter croissants stacked in a golden brown pile with flaky textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvtPy4nSu5uZJAL5AMMnraly26HsaXhSgxQ3EW-b6kbEBrF68kz8vFGPfYhNnA3NrYCbNnZzyKcWTO63Bvw5S-DlsRXFUHE37_o8pljJpWLaHF_gqDXc6LlH2rhAajNN6ANJZTJUaNOLtNB8dpPl6N4QcNkUv6eRafwZ5D_qQP90Qkd5pnIXX5oqD4zixBKoQ10utMcwNs5uCoD5SfHT9-1OuUj3diutJxDRe97yqwpYp0UV6aODU6ylzYiqPtmrZxT-pjNne4NWz6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-on-surface">Feingebäck</h3>
+</div>
+</div>
+<!-- Seasonal -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high aspect-[21/9] flex items-center p-12">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50" data-alt="Seasonal selection of bread and pastries on a long table in a sunlit artisanal bakery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXoTWsn7LpuWttmqzrvpLGuDEORnXthTyO08c0ZByD0Qap8i0AI-hldXULzRlrJs_VS_qxHEEfzMcWkopog9DjckO0qnHxxRoyqi2KU2qtIIybQqNsCOOf6RANTU2AcThOkB2fMF9WSyJhOsmKSeWI6auX-Ze6yWblFFCVgkHdaYbjF5Ow9NHzx9I3_niNazpaJY_3oXTyW-TcyP1DL74eCpp4-CLN9PXxqIfyhUrTjDdKdrhQOP5yUOrIreb30M4Rct4wzE7keo2D"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-on-surface mb-2">Saisonale Highlights</h3>
+<p class="font-body-md text-on-surface-variant">Jeden Monat neue Kreationen direkt aus dem Steinofen.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section (Aktuelles) -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-primary mb-2">Aktuelles</h2>
+<p class="font-body-md text-on-surface-variant">Neuigkeiten aus unserer Backstube</p>
+</div>
+<a class="hidden md:flex items-center text-primary font-label-md group" href="#">
+                        Alle Beiträge
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- News Item 1 -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Baker dusting a fresh loaf of bread with flour in a warm atmospheric kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfotP7AB3pODGKBbzwTtR9bgEXzwv74D76g4qQ_NUDz4wS6BKjhOPKGl7tfBApj4PsMhdUE67WfkpxghcFcc9KuCO1NvjXkWXyqLEYcBt76PiT5a2Ml4mLv8a3rrQeJP6g2pviEip1WS8Wjt9ngFVNqdNOgdyv1DEQhpMHWc2HC46fi9OYotT3hdPTjAGX-QWvMJ9o9jy9oR8ru3Da5PEBfgOCTLnp7AzYSXRxQUTknq7mAuSzFwzAL6ZriY7MrcA2hEYO_udJ2CtF"/>
+</div>
+<div class="p-6">
+<span class="font-label-sm text-outline mb-2 block">12. April 2024</span>
+<h4 class="font-headline-md text-on-surface mb-3">Neuer Standort in der Altstadt</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Wir erweitern unsere Familie! Bald begrüßen wir euch in unseren neuen Räumlichkeiten...</p>
+<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
+</div>
+</div>
+<!-- News Item 2 -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Golden muffins and small cakes on a wire rack cooling near a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBVGKnLL7N-4V_SnTi-bp9kQJjv5tjnpfdB0pRl77e46oGG-Sza40dko34VWI2tsc1CfwWtvwHdRKMQzKdFYvgodvtcYGuzOuD9k3JaOx71V1CGBFUi8ZEYbyBdQ8tIe0bqq6nRMnmPut2eA-lhehj4YHxzjeSukJRrUhE204bu-aJjWoeezUxCFlNvYK4cBoxnEtPCVRBYKQDYP0gE9vAgQcOOOD2n96VFI63VTmEuWnebgwVAT0TLtEiI8PI6PbyCrJxvYuycXb6"/>
+</div>
+<div class="p-6">
+<span class="font-label-sm text-outline mb-2 block">05. April 2024</span>
+<h4 class="font-headline-md text-on-surface mb-3">Die Rückkehr der Brioche</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Nach langer Suche haben wir die perfekte Butter für unsere Brioche gefunden. Ab heute wieder im Sortiment.</p>
+<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
+</div>
+</div>
+<!-- News Item 3 -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-outline-variant hover:border-primary/40 transition-colors group">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Top down view of flour being sifted onto a wooden work surface with grains around" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX06hQ2YfBHo_bmLzMRWP00175L0aRYiZcbRP_aZxHPcev8iSDg2FfxNa_Nqm_uEZj1hxp3m_5YPUtec4UO44VbJE-8O3aiN4PEiGNwVkFNEUGwavrAtx_-JNzQMkcNC3RBdXtjtV1yy_huYWyaXtGiCk8Cenypnuxxfj_e-YAiSWJo3cnaOrmoLhuLll8taJsz5_8cSVuXYB9C9BzvKCeWAzmkywkOcASFvwWCz1UvDMbIhHhpoJLHqpESO2BdL_zvqVAMO_q7sDP"/>
+</div>
+<div class="p-6">
+<span class="font-label-sm text-outline mb-2 block">28. März 2024</span>
+<h4 class="font-headline-md text-on-surface mb-3">Workshop: Sauerteig für Anfänger</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Lerne die Kunst des langsamen Backens in unserem exklusiven Abend-Workshop im Mai.</p>
+<a class="text-primary font-label-md flex items-center" href="#">Mehr lesen <span class="material-symbols-outlined text-[18px] ml-1">chevron_right</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hours & Location Section -->
+<section class="py-section-padding px-margin-mobile" id="location">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-10">
+<div>
+<h2 class="font-headline-lg text-primary mb-6">Öffnungszeiten &amp; Standort</h2>
+<p class="font-body-lg text-on-surface-variant">
+                            Besuchen Sie uns und erleben Sie den Duft von frisch gebackenem Brot. Wir freuen uns auf Ihren Besuch.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-md text-primary uppercase mb-4 tracking-widest flex items-center">
+<span class="material-symbols-outlined mr-2">schedule</span> Öffnungszeiten
+                            </h3>
+<ul class="space-y-2 text-on-surface font-body-md">
+<li class="flex justify-between"><span>Mo - Fr</span> <span class="text-on-surface-variant">06:00 - 18:30</span></li>
+<li class="flex justify-between"><span>Samstag</span> <span class="text-on-surface-variant">06:30 - 14:00</span></li>
+<li class="flex justify-between"><span>Sonntag</span> <span class="text-on-surface-variant">07:30 - 11:00</span></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-primary uppercase mb-4 tracking-widest flex items-center">
+<span class="material-symbols-outlined mr-2">location_on</span> Adresse
+                            </h3>
+<p class="text-on-surface font-body-md leading-relaxed">
+                                Getreidegasse 12<br/>
+                                8001 Zürich<br/>
+                                Schweiz
+                            </p>
+</div>
+</div>
+<div class="p-6 bg-surface-container rounded-lg border-l-4 border-primary">
+<p class="font-body-md italic text-on-surface-variant">
+                            "Jeden Morgen ab 04:00 Uhr heizen wir unsere Steinöfen ein, damit pünktlich zum Sonnenaufgang das erste Brot bereitsteht."
+                        </p>
+</div>
+</div>
+<div class="h-[500px] rounded-2xl overflow-hidden shadow-2xl relative border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Stylized map showing a cozy neighborhood street in Zurich where the bakery is located" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNmqyxCDVNthGv02G7kgPwLgCugY56UaQJqQXiAPDy0ocfkvASPUVOv--qUFcuLoqXXYxdXwhgDacR6YRMaA278AdGdMX3I8khYTZkCRQ5fytyHGzLsjZPiu0zYYpTIsW6biotnvzFMhUNATdKXSCu_New3tF6dok0t9iSEzHHlFV52hvJtKb3RkWmpTEy7S6fz2SZ3ZUxIAOZ36xNiv6mvoXBcg5ou5jciZJxq22vuTntW--ppL2VJB9Kng9NtNWhwdo_h85mI_GV"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-lg" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-ping"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1A1A1A] border-t border-[#D4A373]/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-4">
+<img src="logo.png" alt="Heritage Grains" class="h-40 w-auto"/>
+<p class="font-sans text-sm tracking-tight text-stone-500 max-w-xs">
+                    Handwerkliche Bäckerei mit Fokus auf traditionelle Fermentation und regionale Getreidesorten.
+                </p>
+<div class="flex space-x-4">
+<a class="text-stone-500 hover:text-[#D4A373] transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-500 hover:text-[#D4A373] transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-between">
+<div class="flex space-x-8 font-sans text-sm tracking-tight">
+<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Contact</a>
+<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Provenance</a>
+<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Careers</a>
+<a class="text-stone-500 hover:text-[#D4A373] underline-offset-4 hover:underline" href="#">Privacy</a>
+</div>
+<div class="font-sans text-sm tracking-tight text-stone-500 mt-8 md:mt-0">
+                    © 2024 Heritage Grains Bakery. Handcrafted at dawn.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
