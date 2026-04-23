@@ -271,10 +271,60 @@
   ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 2px; }
 
   @media (max-width: 768px) {
-    .hero-h1 { font-size: 52px !important; }
+    /* Typography */
+    .hero-h1 { font-size: 44px !important; line-height: 1.0 !important; }
+
+    /* Sections */
+    section { padding-top: 72px !important; padding-bottom: 72px !important; }
+
+    /* Navbar */
+    #navbar > div { padding: 0 16px !important; }
+    .desktop-nav { display: none !important; }
+
+    /* Stats */
     .stats-grid { grid-template-columns: 1fr 1fr !important; }
-    .bento-grid { grid-template-columns: 1fr !important; }
-    .bento-grid > * { grid-column: span 1 !important; }
+    .stats-grid > div { border-right: none !important; border-bottom: 1px solid var(--border); }
+    .stats-grid > div:nth-child(odd) { border-right: 1px solid var(--border) !important; }
+    .stats-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+
+    /* Bento grid */
+    .bento-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+    .bento-grid > * { grid-column: span 1 !important; aspect-ratio: 4/3 !important; }
+
+    /* About section */
+    .about-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+    .about-img-wrap { padding-right: 0 !important; padding-bottom: 20px; margin-bottom: 0 !important; }
+    .about-img-wrap::before { right: -10px !important; bottom: -10px !important; top: 10px !important; left: 10px !important; }
+    .about-img-wrap img { height: 300px !important; }
+
+    /* Highlights */
+    .highlights-grid { grid-template-columns: 1fr !important; }
+
+    /* Process */
+    .process-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
+
+    /* Location */
+    .location-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
+    .footer-grid > div:first-child { grid-column: span 2; }
+
+    /* Buttons in hero */
+    .hero-btns { flex-direction: column !important; align-items: stretch !important; }
+    .hero-btns a { text-align: center !important; }
+
+    /* Testimonial */
+    #testimonial-text { font-size: 22px !important; }
+
+    /* Section labels & headings */
+    h2.font-cormorant { font-size: 38px !important; }
+
+    /* Product cards padding */
+    .product-card { padding: 24px !important; }
+
+    /* General padding */
+    [style*="padding:0 32px"] { padding-left: 16px !important; padding-right: 16px !important; }
   }
 </style>
 </head>
@@ -334,7 +384,7 @@
     <p class="fade-up" style="font-size:17px;color:rgba(245,237,216,0.65);max-width:480px;margin:0 auto 44px;line-height:1.7;" data-delay="200">
       Handwerkliche Backkunst mit regionalen Zutaten und über 100 Jahren Leidenschaft.
     </p>
-    <div class="fade-up" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-delay="300">
+    <div class="fade-up hero-btns" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-delay="300">
       <a href="#specialties" class="btn-gold-fill">Unsere Spezialitäten</a>
       <a href="#location" class="btn-outline-cream">Standort finden</a>
     </div>
@@ -774,20 +824,18 @@
   document.getElementById('testimonial-text').style.transition = 'opacity 0.3s';
   document.getElementById('testimonial-author').style.transition = 'opacity 0.3s';
 
-  // Responsive grid fixes
+  // Responsive grid fixes (for grids set via inline style)
   function fixResponsive() {
-    const isMobile = window.innerWidth < 768;
-    const aboutGrid = document.querySelector('.about-grid');
-    const locationGrid = document.querySelector('.location-grid');
-    const footerGrid = document.querySelector('.footer-grid');
-    const highlightsGrid = document.querySelector('.highlights-grid');
-    const processGrid = document.querySelector('.process-grid');
-
-    if (aboutGrid) aboutGrid.style.gridTemplateColumns = isMobile ? '1fr' : '1fr 1fr';
-    if (locationGrid) locationGrid.style.gridTemplateColumns = isMobile ? '1fr' : '3fr 2fr';
-    if (footerGrid) footerGrid.style.gridTemplateColumns = isMobile ? '1fr 1fr' : '2fr 1fr 1fr 1fr';
-    if (highlightsGrid) highlightsGrid.style.gridTemplateColumns = isMobile ? '1fr' : 'repeat(3,1fr)';
-    if (processGrid) processGrid.style.gridTemplateColumns = isMobile ? '1fr 1fr' : 'repeat(4,1fr)';
+    const m = window.innerWidth < 768;
+    const set = (sel, val) => { const el = document.querySelector(sel); if (el) el.style.gridTemplateColumns = val; };
+    set('.about-grid',      m ? '1fr'           : '1fr 1fr');
+    set('.location-grid',   m ? '1fr'           : '3fr 2fr');
+    set('.footer-grid',     m ? '1fr 1fr'       : '2fr 1fr 1fr 1fr');
+    set('.highlights-grid', m ? '1fr'           : 'repeat(3,1fr)');
+    set('.process-grid',    m ? '1fr 1fr'       : 'repeat(4,1fr)');
+    // Navbar inner padding
+    const navInner = document.querySelector('#navbar > div > div');
+    if (navInner) navInner.style.padding = m ? '0 16px' : '0 32px';
   }
 
   fixResponsive();
