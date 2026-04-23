@@ -113,14 +113,24 @@
 <body class="font-body-md bg-background text-on-background">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-[#D4A373]/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-    <div class="flex justify-between items-center px-4 py-1 max-w-7xl mx-auto">
+    <div class="flex justify-between items-center px-4 md:px-8 py-1 max-w-7xl mx-auto">
         <img src="logo.png" alt="Heritage Grains" class="h-14 md:h-28 w-auto"/>
-        <button id="menu-btn" class="text-[#D4A373] p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-wide">
+            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">History</a>
+            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Our Craft</a>
+            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Daily Menu</a>
+            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Specialties</a>
+            <a class="text-stone-400 hover:text-stone-200 transition-colors" href="#">Locations</a>
+        </div>
+        <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">Visit Us</button>
+        <!-- Mobile Hamburger -->
+        <button class="md:hidden text-[#D4A373] p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
     </div>
-    <!-- Dropdown Menu -->
-    <div id="mobile-menu" class="hidden bg-[#1A1A1A] border-t border-[#D4A373]/15 px-6 py-4 flex flex-col gap-1 font-serif text-lg">
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1A1A1A] border-t border-[#D4A373]/15 px-6 py-4 flex flex-col gap-1 font-serif text-lg">
         <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">History</a>
         <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Our Craft</a>
         <a class="text-stone-400 hover:text-[#D4A373] transition-colors py-3 border-b border-outline-variant" href="#">Daily Menu</a>
